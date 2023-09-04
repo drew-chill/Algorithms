@@ -1,0 +1,13 @@
+def splitArray_toChunks(lst, chunk_size):
+  chunks = []
+  for i in range(0, len(lst), chunk_size):
+    chunks.append(lst[i:i + chunk_size])
+  return chunks
+
+# Example usage
+input_list = input("Enter a list of numbers seperated using spaces: ").split()
+input_list = [int(x) for x in input_list] # Convert input to a list of integers
+chunk_size = int(input("Enter your designated chunk size: "))
+
+result = splitArray_toChunks(input_list, chunk_size)
+print("Your chunks: ", result)
